@@ -1,31 +1,4 @@
 <div class="container mt-5" data-bs-theme="">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="d-flex justify-content-between align-items-center activity py-4">
-        <div><i class="fa fa-clock-o"></i><span class="ms-2"><%= Time.current.to_formatted_s(:time) %></span></div>
-        <div>
-          <h2 class="activity-done">Movies(<%=Movie.count%>)</h2>
-        </div>
-        <div> <a href="/movies/new" class="btn btn-outline-light"><i class="fa-solid fa-plus"></i></a></div>
-      </div>
-      <div class="row row-cols-1 row-cols-md-4">
-        <% @movies.each do |movie| %>
-          <a class="text-decoration-none" href="movies/<%=movie.id%>">
-            <div class="col">
-              <div class="card w-100">
-                <div class="overflow-hidden"style="height:320px;"><img src="<%=movie.poster_url%>" class="card-img-top h-100" alt="..."></div>
-                <div class="card-body">
-                  <h5 class="card-title overflow-hidden" style="max-height: 50px;"v><%=movie.title%></h5>
-                  <div class="d-flex align-items-center">
-                    <i class="fa-solid fa-star text-warning me-1"></i>
-                    <p class="card-text fs-5 "><%= movie.rating%></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  movies
 </div>
+
