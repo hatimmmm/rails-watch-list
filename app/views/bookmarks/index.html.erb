@@ -1,0 +1,35 @@
+<div class="container mt-5" data-bs-theme="dark">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex justify-content-between align-items-center activity">
+        <div><i class="fa fa-clock-o"></i><span class="ms-2"><%= Time.current.to_formatted_s(:time) %></span></div>
+        <div>
+          <h2 class="activity-done">All lists(<%=List.count%>)</h2>
+        </div>
+        <div class="icons"><a href="lists/new"><i class="fa-solid fa-plus"></i></a><i class="fa fa-ellipsis-h ms-2"></i></div>
+      </div>
+      <div class="mt-3">
+        <ul class="list list-inline">
+          <% @lists.each do |list|%>
+            <li class=" list-group-item border rounded p-2 m-3">
+              <a class="text-decoration-none btn d-flex justify-content-between" href="/list/show/<%=list.id%>">
+                <div class="d-flex flex-row align-items-center"><i class="fa fa-check-circle checkicon text-success p-2"></i>
+                  <div class="ml-2">
+                    <h5 class=""><%=list.name%></h5>
+                    <div class="d-flex flex-row mt-1 text-black-50 date-time">
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                  <div class="d-flex flex-column mr-2">
+                    <div class=""></div>
+                    <span class="date-time"><%= list.created_at.strftime('%m/%d/%Y') %></span></div>
+                  <i class="fa fa-ellipsis-h ms-3"></i></div>
+              </a>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

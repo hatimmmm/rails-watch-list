@@ -1,0 +1,28 @@
+<div class="container">
+  <div style="height:300px" class="col-12 d-flex align-items-center justify-content-center">
+    <h1><%=@list.name%></h1>
+  </div>
+  <div class="d-flex flex-direction-column">
+    <%@movies.each do |movie|%>
+      <a href="/movies/<%=movie.id%>" class="text-decoration-none">
+        <div class="card mb-3" style="max-width: 700px;">
+          <div class="row g-0">
+            <div class="col-md-4 overflow-hidden" style="height:200px">
+              <img src="<%=movie.poster_url%>" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h2 class="card-title"><%=movie.title%></h2>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-star text-warning me-1"></i>
+                  <p class="card-text fs-5 "><%= movie.rating%></p>
+                </div>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    <%end%>
+  </div>
+</div>

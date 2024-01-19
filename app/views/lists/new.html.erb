@@ -1,0 +1,9 @@
+<div class="container"></div>
+<h1 class = "py-3">Create a list</h1>
+
+  <%= simple_form_for @list, defaults: { class: "form",input_html: { class: 'form-control rounded' } }  do |f|%>
+    <%=f.input :name%>
+    <%=f.button :submit, class: "btn btn-primary"%>
+
+  </div>
+<%end%>
