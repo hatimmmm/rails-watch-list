@@ -14,6 +14,7 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    title = params[:movie][:title]
   end
 
   def create
