@@ -3,7 +3,7 @@ require "json"
 
 class MoviesController < ApplicationController
   def index
-    # @movies = Movie.all
+    @movies = Movie.all
   end
 
   def show
@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
-    title = params[:movie][:title]
+    # title = params[:movie][:title]
   end
 
   def create

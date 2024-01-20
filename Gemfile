@@ -71,3 +71,5 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
 gem 'popper_js', '~> 2.11', '>= 2.11.8'
+gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
+gem 'figaro', '~> 1.2'
